@@ -1,0 +1,231 @@
+%%%%%%%%%%%%%%%%%
+
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+
+\documentclass[10pt,a4paper,ragged2e]{classfile}
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=10cm,marginparwidth=7.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.5cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+% Change the colours if you want to
+\definecolor{Sky}{HTML}{2d7dad}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{deepsky}{HTML}{074870}
+%\colorlet{heading}{VividPurple}
+\colorlet{accent}{Sky}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\colorlet{heading}{deepsky}
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+%% Background Beamer
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+
+\includegraphics[width=22.0cm,height=5.0cm]{background.png}%
+\vfill
+}}}
+
+\usepackage{enumitem,xcolor}
+\usepackage{xcolor}
+
+
+% Hyperlink ICON
+% Compile with LuaLaTeX 
+%\documentclass{article}
+\usepackage{fontawesome}
+\usepackage[hidelinks]{hyperref}
+
+% Redefinition, symbol included in link:
+\let\orighref\href
+\renewcommand{\href}[2]{\orighref{#1}{#2\,\faExternalLink}}
+
+
+
+
+
+
+
+\begin{document}
+\AddToShipoutPicture*{\BackgroundPic}
+
+\name{ NILOY CHAKRABORTY}
+\tagline{Master's Student At University of Stuttgart}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{3.5cm}{niloy.png}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+   \phone{+49-15171684000 }
+  \mailaddress{Allmandring-24-c, Zi-20802}
+  \location{ 70569 Stuttgart}
+  \email{chakrabortyniloy2018@gmail.com }
+ \github{https://github.com/Niloy-Chakraborty} 
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Experience}
+\cvevent{Intern in Predictive Analytics}{Robert Bosch GmbH}{March 2020 --Present}{Stuttgart ,Germany }
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item Log data parsing and Process Mining of the in-house Software (myMBR) to bring insights from data
+\item User Journey analysis through Process Analytics and finding the bottlenecks
+\item Creation of Roles, and KPIs for myMBR, Analysis of Monthly Business data using Tableau and MS Power BI
+\item Development of Purchase Order Denial Model using Machine
+Learning Techniques.
+
+
+
+\divider
+
+\end{itemize}
+
+\cvevent{Student Assistant}{Fraunhofer IAO}{Feb 2019 --Dec,2019}{Stuttgart ,Germany }
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item Time-series data analysis of Smart Meter data for a smart energy system project.
+\item Time-series stream clustering using different Machine Learning Techniques for Smart Energy Systems.
+\item Building a Web Application for showing the results.
+
+\divider
+
+\end{itemize}
+
+\cvevent{Scientific HiWi}{IAAS-University of Stuttgart}{July 2019 --Dec,2019}{Stuttgart ,Germany }
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item Building data flow pipeline for smart data-centers.
+\item Implemented real-time data monitoring using InfluxDB.
+\item Prediction of CPU load for adopting smart decisions.
+
+\divider
+
+\end{itemize}
+
+\cvevent{Assistant System Engineer}{Tata Consultancy Services Limited}{Oct 2016 --Sept 2018}{Hyderabad ,India }
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item Web Application development using HTML, CSS, JavaScript in front end and python based frameworks in the back end.
+\item Developed different Business Solutions and Proof of Concepts using Machine Learning and Deep Learning Techniques.
+\item \textbf{PoCs Developed: }IP Network Anomaly Detection, Cognitive KPI
+Prediction, Network Traffic Classification.
+\end{itemize}
+
+
+\divider
+
+
+\cvevent{Undergraduate Research Intern}{National Institute of Technology, Sikkim}{April 2014 -- June 2016}{Sikkim ,India }
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item Designed Photonic Crystal Antenna between the range of 200THz and 210THz using CST studio
+
+\end{itemize}
+\divider
+
+\newpage
+
+\cvsection[page2sidebar]{Self-Paced Projects}
+
+\textbf{Model Based Test Driven Development}
+
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item An approach for developing faster Regression test suites and also in executing multiple test cases with less manual intervention 
+\item  It uses Finite State Machines for visual representation of test cases.
+\item It also has features like tree visualization of the yang files, python code editor for writing test cases , syntax checker, graph editor etc.
+\end{itemize}
+
+
+\textbf{My Smart Home Garden}
+\href{https://github.com/Niloy-Chakraborty/Smart-Gardening}{}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item A gardening system (Watering, Lighting, and Plant Identification) was automated, which could be operated using Telegram bot.
+\item Cloud based data storage through Message Queuing for sensor and weather data, which could also be visualized in Telegram bot.
+\item An AI planning model was developed for automatic watering and lighting. 
+\item CNN based plant name and health identification models were developed.
+\end{itemize}
+
+\textbf{Real Time Data Monitoring System}
+\href{https://github.com/Niloy-Chakraborty/Real-Time-Data-Monitoring-System}{}
+
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item This project shows an end-to-end data flow pipeline via RabbitMQ and InfluxDB for sensor/ network KPI data.
+\item The data can be visualized via Chronograf in Real-Time for further analysis
+\end{itemize}
+
+\textbf{Website Saliency Prediction}
+\href{https://github.com/Niloy-Chakraborty/Webpage_Saliency_Prediction}{}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item A study of web-page saliency using FiWi dataset (only 149 images). 
+\item A VGG-16 based Fully Convolutional Neural Network with skip connection was implemented to predict the Human attention map of the Webpages.
+\item A 2 stage Transfer Learning process was used to compensate the lack of training data and the results were compared with the top saliency models.
+
+\end{itemize}
+
+\textbf{Time Series Stream Clustering for Smart Meter Dataset}
+\href{https://github.com/Niloy-Chakraborty/Time-Series_Clustering_on_London_Smart_Meter_Dataset}{}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item This project implemented a prototype of the time-series clustering of the London Smart Meter Dataset using various Machine Learning algorithms, like K-means, Hierarchical clustering, and Auto encoder.
+\item The clustered groups were visualized for better insights of the data.
+\end{itemize}
+
+\textbf{Pima Indian Diabetes Classification}
+\href{https://github.com/Niloy-Chakraborty/Pima_Indian_Diabetes_Classification}{}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+\item In this project, the Pima Indian Diabetes dataset has been
+classified using the Random Forest classifier. 
+\item Although the initial accuracy was 74\%, it has been increased to 79\% using Feature Selection technique. 
+
+\end{itemize}
+
+
+
+\cvsection{Honors \& Awards}
+\begin{itemize}[label=\textcolor{blue}{\textbullet}]
+    \item  Won various awards (On the Spot, Special Initiative award, etc.) during my Full time job for my contribution in the R\&D
+    \item Consistently Ranked among top 5\% during Undergrad .
+    \item Honoured with "VIDYASHREE" titled award for outstanding performance in the 10th Grade, from Amul Group, India
+    \item Awarded for serving as Placement Coordinator during Undergrad.
+    \item Received Scholarship from All India Council for Technical Education for National Level Training Program in Telecom. Infrastructure.
+
+
+\end{itemize}
+
+
+\end{document}
+
